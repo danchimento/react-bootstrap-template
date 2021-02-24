@@ -4,14 +4,15 @@
 // Type
 $font-family-base: Poppins;
 $font-size-base: 0.85rem;
+$headings-font-weight: 600;
 
 // Colors
 $body-bg: #F5F5F6;
 $primary: #2D4168;
+$secondary: #F1F1F5;
+$color-grey: #6A6E75;
+$subtle-grey: #F1F1F5;
 $primary-filter: invert(21%) sepia(6%) saturate(5511%) hue-rotate(182deg) brightness(95%) contrast(85%);
-
-// Header
-$header-height: 60px;
 
 // Nav
 $nav-width: 225px;
@@ -20,5 +21,13 @@ $nav-link-padding-y: .5rem;
 
 // Other
 $input-border-radius: 10px;
+
+// Cards
+$card-bg-color: white;
+$card-border-radius: 10px;
+
+
+// Buttons
+$btn-border-radius: .5rem;
 
 @import "bootstrap";

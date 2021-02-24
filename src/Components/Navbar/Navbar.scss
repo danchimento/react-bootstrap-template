@@ -1,26 +1,19 @@
 @import "../../theme.scss";
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100; /* Behind the navbar */
-    padding: $header-height 0 0 10px; /* Height of navbar */
-    width: $nav-width;
+    padding-right: map-get($map: $spacers, $key: 5);
+    padding-left: map-get($map: $spacers, $key: 3);
     display: flex;
+    flex-shrink: 0;
 
-    &.sidebar-sticky {
-        position: relative;
-        top: 0;
-        height: calc(100vh - 48px);
-        padding-top: 0.5rem;
-        overflow-x: hidden;
-        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    .position-sticky {
+        align-self: flex-start;
+        top: 75px;
     }
+}
 
+#sidebarMenu {
     .nav-item {
-
         margin-top: 10px;
 
         &:first-child {
@@ -46,10 +39,10 @@
 }
 
 @media (max-width: 767.98px) {
-    .sidebar {
-        width: $nav-width-mobile;
+    #sidebarMenu {
+        padding-right: map-get($map: $spacers, $key: 1);
+        padding-left: map-get($map: $spacers, $key: 1);
         justify-content: center;
-        padding-left: 0;
 
         .nav-link {
             img {

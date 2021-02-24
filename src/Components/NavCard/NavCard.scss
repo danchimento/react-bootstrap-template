@@ -1,0 +1,28 @@
+@import "../../theme.scss";
+
+.tz-nav-card {
+    background-color: $card-bg-color;
+    border-radius: $card-border-radius;
+    padding: 1em 1em 2em;
+
+    .tz-nav-card-header {
+        font-size: larger;
+        font-weight: 600;
+    }
+
+    .tz-nav-card-body {
+        display: flex;
+
+        & > * {
+            flex-basis: 0;
+            flex-grow: 1;
+
+            
+            @media (max-width: 767.98px) {
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}

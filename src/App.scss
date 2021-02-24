@@ -1,12 +1,23 @@
 @import './theme.scss';
 
+html, body, #root, .App {
+    height: 100%;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    flex-grow: 1;
+}
+
 main {
-    padding-left: $nav-width;
+    flex-grow: 1;
+    padding: 1em map-get($map: $spacers, $key: 3);
 }
 
 
 @media (max-width: 767.98px) {
-    main {
-        padding-left: $nav-width-mobile;
-    }
 }

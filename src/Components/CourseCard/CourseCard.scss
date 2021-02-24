@@ -1,0 +1,37 @@
+@import "../../theme.scss";
+
+.tz-course-card {
+    background-color: $card-bg-color;
+    border-radius: $card-border-radius;
+    border: thin solid $subtle-grey;
+    overflow: hidden;
+    margin: .5em;
+
+    &:first-child {
+        margin-left:0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .tz-course-card-body {
+        padding: 1em;
+
+        .tz-course-card-title {
+            font-weight: 600;
+        }
+
+        .tz-course-card-subtitle {
+            color: $color-grey;
+        }
+
+        .btn {
+            display: block;
+        }
+    }
+}

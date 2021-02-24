@@ -11,6 +11,7 @@ import Messages from './Pages/Messages/Messages';
 import Projects from './Pages/Projects/Projects';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
+import NavCalendar from './Components/NavCalendar/NavCalendar';
 
 export default function App() {
 
@@ -19,11 +20,10 @@ export default function App() {
       <Router>
         <Header />
 
-        <div className="container-fluid">
-          <div className="">
-            <Navbar className="" />
+        <div className="container-fluid d-flex p-0">
+            <Navbar />
 
-            <main className="ms-sm-auto">
+            <main>
               <Switch>
                 <Route path="/courses"><Courses /></Route>
                 <Route path="/grades"><Grades /></Route>
@@ -32,7 +32,8 @@ export default function App() {
                 <Route path="/"><Dashboard /></Route>
               </Switch>
             </main>
-          </div>
+
+            <NavCalendar />
         </div>
       </Router>
     </div>
