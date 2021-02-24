@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUsers, faTh, faAward, faCommentAlt, faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import dashboardIcon from '../../assets/icons/dashboard-icon.svg';
@@ -8,9 +6,8 @@ import gradesIcon from '../../assets/icons/grades-icon.svg';
 import messagesIcon from '../../assets/icons/messages-icon.svg';
 import projectsIcon from '../../assets/icons/projects-icon.svg';
 import Icon from '../Icon/Icon';
-import Courses from '../../Pages/Courses/Courses';
 
-export default function(props) {
+export default function Navbar(props) {
     return (<nav id="sidebarMenu" className={`d-md-block bg-white sidebar collapse ${props.className}`}>
     <div className="position-sticky pt-3">
       <ul className="nav flex-column">

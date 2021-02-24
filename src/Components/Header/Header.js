@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/tozme-icon.svg';
 import './Header.scss';
 
-export default function () {
+export default function Header() {
   return (
     <header className="navbar sticky-top  p-0 bg-primary">
       <div className="row w-100">
         <Link className="navbar-brand col-md-3 col-lg-2 me-0 ps-3 text-white" aria-current="page" to="/">
-          <img src={logo} />
+          <img src={logo} alt="logo" />
           TOZME
 
         </Link>
