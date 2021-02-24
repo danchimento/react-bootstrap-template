@@ -20,10 +20,10 @@ export default function App() {
         <Header />
 
         <div className="container-fluid">
-          <div className="row">
-            <Navbar className="col-md-3 col-lg-2" />
+          <div className="">
+            <Navbar className="" />
 
-            <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main className="ms-sm-auto">
               <Switch>
                 <Route path="/courses"><Courses /></Route>
                 <Route path="/grades"><Grades /></Route>

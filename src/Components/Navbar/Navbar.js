@@ -8,32 +8,32 @@ import projectsIcon from '../../assets/icons/projects-icon.svg';
 import Icon from '../Icon/Icon';
 
 export default function Navbar(props) {
-    return (<nav id="sidebarMenu" className={`d-md-block bg-white sidebar collapse ${props.className}`}>
+    return (<nav id="sidebarMenu" className={`d-xs-block bg-white sidebar ${props.className}`}>
     <div className="position-sticky pt-3">
       <ul className="nav flex-column">
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/">
-            <Icon src={dashboardIcon} /> Dashboard
+            <Icon src={dashboardIcon} /> <span>Dashboard</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/courses">
-            <Icon src={coursesIcon} /> Courses
+            <Icon src={coursesIcon} /> <span>Courses</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/grades">
-            <Icon src={gradesIcon} /> Grades
+            <Icon src={gradesIcon} /> <span>Grades</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/messages">
-            <Icon src={messagesIcon} /> Messages
+            <Icon src={messagesIcon} /> <span>Messages</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/projects">
-            <Icon src={projectsIcon} /> Projects
+            <Icon src={projectsIcon} /> <span>Projects</span>
           </Link>
         </li>
       </ul>

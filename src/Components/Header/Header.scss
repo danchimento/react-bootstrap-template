@@ -1,8 +1,13 @@
-@import '../../theme.scss';
+@import "../../theme.scss";
 
-header {
+header.navbar {
+    flex-wrap: nowrap;
+    height: $header-height;
+
     .navbar-brand {
         font-weight: 600;
+        width: $nav-width;
+        padding-left: 15px;
     }
 
     .navbar-toggler {
@@ -11,6 +16,25 @@ header {
     }
 
     input.form-control {
+        width: 350px;
         font-size: small;
+    }
+}
+
+@media (max-width: 767.98px) {
+    header.navbar {
+        .navbar-brand {
+            width: $nav-width-mobile;
+            padding-left: 10px;
+
+            span {
+                display: none;;
+            }
+        }
+
+        input.form-control {
+            flex-grow: 1;
+            margin: 0 15px;
+        }
     }
 }
