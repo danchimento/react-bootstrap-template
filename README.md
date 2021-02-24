@@ -21,5 +21,3 @@ This repo is linked to a Vercel instance. Commits are automatically deployed (ma
 
 ## Design Notes
 All icons should be available locally, however there is a FontAwesome script in the index file that can be used to access unstyled icons.
-
-There is currently no view configured for mobile devices, there will be a separate screen configured to indicate that the user's screen is too small for the demo's inital deployment
