@@ -1,0 +1,16 @@
+@import '../../theme.scss';
+
+header {
+    .navbar-brand {
+        font-weight: 600;
+    }
+
+    .navbar-toggler {
+        top: 0.25rem;
+        right: 1rem;
+    }
+
+    input.form-control {
+        font-size: small;
+    }
+}

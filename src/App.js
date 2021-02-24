@@ -1,74 +1,27 @@
 import './App.scss';
-
-// eslint-disable-next-line
-import * as bootstrap from 'bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Dashboard from './Pages/Dashboard/Dashboard';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUsers, faTh, faAward, faCommentAlt, faBars } from '@fortawesome/free-solid-svg-icons'
 import Courses from './Pages/Courses/Courses';
 import Grades from './Pages/Grades/Grades';
 import Messages from './Pages/Messages/Messages';
 import Projects from './Pages/Projects/Projects';
+import Header from './Components/Header/Header';
+import Navbar from './Components/Navbar/Navbar';
 
 export default function App() {
 
   return (
     <div className="App">
       <Router>
-        <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-          <Link className="navbar-brand col-md-3 col-lg-2 me-0 px-3" aria-current="page" to="/">
-            TOZME
-          </Link>
-          <button className="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <input className="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search" />
-          {/* <ul className="navbar-nav px-3">
-            <li className="nav-item text-nowrap">
-              <a className="nav-link" href="#">Sign out</a>
-            </li>
-          </ul> */}
-        </header>
+        <Header />
 
         <div className="container-fluid">
           <div className="row">
-            <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-              <div className="position-sticky pt-3">
-                <ul className="nav flex-column">
-                  <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/">
-                      <FontAwesomeIcon icon={faTh} /> Dashboard
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/courses">
-                      <FontAwesomeIcon icon={faUsers} /> Courses
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/grades">
-                      <FontAwesomeIcon icon={faAward} /> Grades
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/messages">
-                      <FontAwesomeIcon icon={faCommentAlt} /> Messages
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/projects">
-                      <FontAwesomeIcon icon={faBars} /> Projects
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+            <Navbar className="col-md-3 col-lg-2" />
 
             <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
               <Switch>
