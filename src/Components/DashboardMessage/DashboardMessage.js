@@ -5,7 +5,7 @@ export default function DashboardMessage(props) {
         <div className="tz-dashboard-message">
             <div className="row">
                 <div className="col-sm-auto">
-                    <img src={props.message.senderProfileImage} />
+                    <img src={props.message.senderProfileImage} alt={`${props.message.senderFirstName}`} />
                 </div>
                 <div className="col">
                     <div>
