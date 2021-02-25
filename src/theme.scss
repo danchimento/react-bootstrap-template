@@ -11,17 +11,28 @@ $body-bg: #F5F5F6;
 $primary: #2D4168;
 $secondary: #F1F1F5;
 $info: #43AEBE;
+$success: #43BE5B;
+$warning: #FF8161;
 $color-grey: #6A6E75;
 $subtle-grey: #F1F1F5;
+
+$tertiary: #FCF8F0;
+
 $primary-filter: invert(21%) sepia(6%) saturate(5511%) hue-rotate(182deg) brightness(95%) contrast(85%);
+$warning-filter: invert(58%) sepia(90%) saturate(814%) hue-rotate(319deg) brightness(101%) contrast(101%);
 
 // Nav
 $nav-width: 225px;
 $nav-width-mobile: 65px;
 $nav-link-padding-y: .5rem;
 
+// Tabs
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-border-color: $primary;
+
 // Other
 $input-border-radius: 10px;
+$progress-height: .5rem;
 
 // Cards
 $card-bg-color: white;

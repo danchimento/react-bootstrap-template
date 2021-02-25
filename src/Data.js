@@ -39,3 +39,32 @@ export const recentMessages = [
         senderProfileImage: danielleImage
     }
 ]
+
+export const projectActivity = [
+    {
+        title: "European History Final Presentation",
+        remainingTime: "3 days",
+        progressPercent: 85
+    },
+    {
+        title: "Picture of Dorian Grey Analysis",
+        remainingTime: "7 days",
+        progressPercent: 55
+    },
+    {
+        title: "Guatemala Annual Growth Report",
+        remainingTime: "10 days",
+        progressPercent: 45
+    }
+]
+
+export const todos = [
+    { "title" : "Email Prof. Garrison" },
+    { "title" : "Ping team for tuesday" },
+    { "title" : "Read 10 min for chem" },
+    { "title" : "Check in with Jennifer" },
+    { "title" : "Submit essay early" },
+    { "title" : "Find research topic" },
+    { "title" : "Coffee Club Memo" },
+    { "title" : "Confirm Friday Meet" },
+]

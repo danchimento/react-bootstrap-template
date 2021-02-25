@@ -1,0 +1,48 @@
+@import "./theme.scss";
+
+// Tabs
+
+.nav-tabs {
+    border-bottom: none !important;
+
+    .nav-link {
+
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+
+        &:hover,
+        &:focus {
+            border-bottom: thin solid $primary;
+        }
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+        border-bottom-color: $nav-tabs-link-active-border-color;
+    }
+}
+
+
+// Font sizes
+
+.fz-small {
+    font-size: small;
+}
+
+.fz-smaller {
+    font-size: smaller;
+}
+
+.font-weight-medium {
+    font-weight: 500;
+}
+
+.font-weight-semi-bold {
+    font-weight: 600;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+

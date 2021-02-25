@@ -1,3 +1,11 @@
+@import '../../theme.scss';
+
 #dashboard {
     height: 2000px;
+
+    @media (max-width: 767.98px) {
+        .tz-todo {
+            margin-top: map-get($map: $spacers, $key: 3) !important
+        }
+    }
 }

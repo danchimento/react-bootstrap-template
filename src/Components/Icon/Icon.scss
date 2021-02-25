@@ -1,0 +1,12 @@
+@import "../../theme.scss";
+
+.tz-icon {
+    height: 1em;
+    width: 1em;
+}
+
+.text-warning {
+    .tz-icon {
+        filter: $warning-filter;
+    }
+}
