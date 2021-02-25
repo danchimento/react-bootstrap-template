@@ -1,30 +1,52 @@
 import NavCard from '../../Components/NavCard/NavCard';
 import './Dashboard.scss';
-import computerImage from '../../assets/images/computer-img.png';
-import geologyImage from '../../assets/images/geology-img.png';
-import engineeringImage from '../../assets/images/engineering-img.png';
 import CourseCard from '../../Components/CourseCard/CourseCard';
+import { courses, recentMessages } from '../../Data';
+import DashboardMessage from '../../Components/DashboardMessage/DashboardMessage';
 
 export default function Dashboard() {
+
     return (
         <div id="dashboard">
-            <NavCard title="My Courses" primary={true} linkText="All Courses" linkSrc="/courses">
-                <CourseCard 
-                    courseName="CSCI 100: Python" 
-                    image={computerImage} 
-                    instructorName="J. Winston"
-                    numStudents={13} />
-                <CourseCard 
-                    courseName="GEO 205: MINERAL SURVEYING" 
-                    image={geologyImage} 
-                    instructorName="H. Smith" 
-                    numStudents={62} />
-                <CourseCard 
-                    courseName="ENG 250: FUEL SYSTEMS" 
-                    image={engineeringImage} 
-                    instructorName="T. Payne"
-                    numStudents={45} />
-            </NavCard>
+            <div class="row">
+                <div class="col">
+                    <NavCard title="My Courses" primary={true} linkText="All Courses" linkSrc="/courses">
+                        {courses.map(c => {
+                            return (
+                                <CourseCard
+                                    courseName={c.title}
+                                    image={c.image}
+                                    instructorName={c.instructorName}
+                                    numStudents={c.numStudents} />
+                            )
+                        })}
+                    </NavCard>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div className="col col-sm-12 col-md-6">
+                    <NavCard title="Recent Messages" linkText="All Messages" linkSrc="/messages">
+                        <div className="mt-3">
+                            {recentMessages.map(m => {
+                                return (
+                                    <div className="mb-4">
+                                        <DashboardMessage message={m} />
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </NavCard>
+
+                    <NavCard className="mt-3" title="Project Activity" linkText="All Projects" linkSrc="/projects">
+                        
+                    </NavCard>
+                </div>
+                <div className="col col-sm-12 col-md-6">
+                    <NavCard>
+                        
+                    </NavCard>
+                </div>
+            </div>
         </div>
     );
 }

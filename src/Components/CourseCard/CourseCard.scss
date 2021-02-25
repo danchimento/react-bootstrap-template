@@ -28,10 +28,13 @@
 
         .tz-course-card-subtitle {
             color: $color-grey;
+            margin-top: map-get($map: $spacers, $key: 2);
         }
 
         .btn {
             display: block;
+            width: 100%;
+            margin-top: map-get($map: $spacers, $key: 3);
         }
     }
 }
