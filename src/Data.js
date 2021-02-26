@@ -16,7 +16,37 @@ export const courses = [
         title: "Python",
         instructorName: "J. Winston",
         numStudents: 13,
-        image: computerImage
+        image: computerImage,
+        grades: [
+            { 
+                name: "Variables and Strings Gist",
+                type: "Submission",
+                dueBy: "Feb 21, 2021 11:59 pm",
+                completed: "Feb 18, 2021 10:30 pm",
+                result: 16.8,
+                possible: 20.0,
+                weight: 3.5
+            },
+            { 
+                name: "Variables Quiz",
+                type: "Assessment",
+                dueBy: "Feb 28, 2021 11:59 pm",
+                completed: "Feb 21, 2021 1:30 pm",
+                result: 46.8,
+                possible: 50.0,
+                weight: 6
+            },
+            { 
+                name: "Glasses Gist",
+                type: "Submission",
+                dueBy: "Mar 1, 2921 11:59 pm",
+                completed: "Mar 2, 2021 6:00 am",
+                result: 19.0,
+                possible: 20.0,
+                weight: 3.5,
+                late: true
+            }
+        ]
     },
     {
         code: "GEO 205",

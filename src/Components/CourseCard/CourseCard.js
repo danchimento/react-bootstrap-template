@@ -1,7 +1,7 @@
 import './CourseCard.scss';
 
 export default function CourseCard(props) {
-    let className = "tz-course-card";
+    let className = "tz-course-card bordered rounded";
     if (props.className) className += ` ${props.className}`;
 
     return (
