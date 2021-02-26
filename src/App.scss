@@ -1,17 +1,19 @@
 @import './theme.scss';
 @import './overrides.scss';
 
-html, body, #root, .App {
+html, body, #root, .App > div {
     height: 100%;
 }
 
-.App {
+/*  TODO: Name this something meaningful. Router? */
+.App > div {
     display: flex;
     flex-direction: column;
 }
 
 .container-fluid {
     flex-grow: 1;
+    height: 100%;
 }
 
 main {

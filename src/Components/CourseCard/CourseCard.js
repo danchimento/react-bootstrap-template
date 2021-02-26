@@ -1,12 +1,15 @@
 import './CourseCard.scss';
 
 export default function CourseCard(props) {
+    let className = "tz-course-card";
+    if (props.className) className += ` ${props.className}`;
+
     return (
-        <div className="tz-course-card">
+        <div className={className}>
             <img src={props.image} alt={props.courseName} />
             <div className="tz-course-card-body">
                 <div className="tz-course-card-title">
-                    {props.courseName}
+                    {props.courseCode}: {props.courseName}
                 </div>
                 <div className="tz-course-card-subtitle">
                     {props.instructorName} &#8226; {props.numStudents} Students

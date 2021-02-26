@@ -5,6 +5,13 @@
     padding: 0 map-get($map: $spacers, $key: 4); /* Height of navbar */
     width: 275px;
 
+    .collapse {
+        position: fixed;
+        left: 100%;
+        top: 0;
+        bottom: 0;
+    }
+
     &.sidebar-sticky {
         position: relative;
         padding-top: 0.5rem;

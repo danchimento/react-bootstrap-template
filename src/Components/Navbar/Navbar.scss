@@ -1,8 +1,6 @@
 @import "../../theme.scss";
 
 .sidebar {
-    padding-right: map-get($map: $spacers, $key: 5);
-    padding-left: map-get($map: $spacers, $key: 3);
     display: flex;
     flex-shrink: 0;
 
@@ -13,6 +11,9 @@
 }
 
 #sidebarMenu {
+    padding-right: map-get($map: $spacers, $key: 3);
+    padding-left: map-get($map: $spacers, $key: 3);
+
     .nav-item {
         margin-top: 10px;
 
@@ -23,12 +24,16 @@
     }
 
     .nav-link {
-        font-weight: 600;
-
         img {
             width: 20px;
             height: 20px;
-            margin-right: 15px;
+        }
+    }
+
+    .tz-account {
+        img {
+            width: 30px;
+            height: 30px;
         }
     }
 }
@@ -44,13 +49,24 @@
         padding-left: map-get($map: $spacers, $key: 1);
         justify-content: center;
 
-        .nav-link {
-            img {
-                margin: 0;
-            }
+        .tz-account {
+            padding-left: .5em !important;
+            padding-right: .5em !important;
+            justify-content: center !important;
+        }
 
-            span {
-                display: none;
+        .nav-item {
+            padding-right: 0 !important;
+
+            .nav-link {
+                .tz-icon {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+
+                span {
+                    display: none;
+                }
             }
         }
     }

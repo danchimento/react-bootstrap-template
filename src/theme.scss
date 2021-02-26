@@ -13,6 +13,8 @@ $secondary: #F1F1F5;
 $info: #43AEBE;
 $success: #43BE5B;
 $warning: #FF8161;
+$danger: #FF6161;
+
 $color-grey: #6A6E75;
 $subtle-grey: #F1F1F5;
 
@@ -20,6 +22,7 @@ $tertiary: #FCF8F0;
 
 $primary-filter: invert(21%) sepia(6%) saturate(5511%) hue-rotate(182deg) brightness(95%) contrast(85%);
 $warning-filter: invert(58%) sepia(90%) saturate(814%) hue-rotate(319deg) brightness(101%) contrast(101%);
+$white-filter: invert(93%) sepia(0%) saturate(5482%) hue-rotate(154deg) brightness(112%) contrast(106%);
 
 // Nav
 $nav-width: 225px;
@@ -27,11 +30,14 @@ $nav-width-mobile: 65px;
 $nav-link-padding-y: .5rem;
 
 // Tabs
+$nav-tabs-link-color: $color-grey;
 $nav-tabs-link-active-bg: transparent;
 $nav-tabs-link-active-border-color: $primary;
+$nav-tabs-link-active-color: $primary;
 
 // Other
 $input-border-radius: 10px;
+$border-radius: 1rem;
 $progress-height: .5rem;
 
 // Cards
@@ -41,5 +47,8 @@ $card-border-radius: 13px;
 
 // Buttons
 $btn-border-radius: .5rem;
+
+// Badge
+$badge-font-weight: 400;
 
 @import "bootstrap";

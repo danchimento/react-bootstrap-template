@@ -3,10 +3,8 @@
 // Tabs
 
 .nav-tabs {
-    border-bottom: none !important;
 
     .nav-link {
-
         border-top: none !important;
         border-left: none !important;
         border-right: none !important;
@@ -23,8 +21,11 @@
     }
 }
 
-
 // Font sizes
+
+.fz-x-small {
+    font-size: x-small;
+}
 
 .fz-small {
     font-size: small;
@@ -32,6 +33,24 @@
 
 .fz-smaller {
     font-size: smaller;
+}
+
+.fz-large {
+    font-size: large;
+}
+
+.fz-larger {
+    font-size: larger;
+}
+.fz-xlarge {
+    font-size: x-large;
+}
+.fz-xxlarge {
+    font-size: xx-large;
+}
+
+.font-weight-regular {
+    font-weight: 400;
 }
 
 .font-weight-medium {
@@ -45,4 +64,3 @@
 .font-weight-bold {
     font-weight: 700;
 }
-

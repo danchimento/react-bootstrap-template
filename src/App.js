@@ -2,7 +2,9 @@ import './App.scss';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect,
+  withRouter
 } from "react-router-dom";
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Courses from './Pages/Courses/Courses';
@@ -12,30 +14,66 @@ import Projects from './Pages/Projects/Projects';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
 import NavCalendar from './Components/NavCalendar/NavCalendar';
+import { Component } from 'react';
 
-export default function App() {
+class AppBody extends Component {
 
-  return (
-    <div className="App">
-      <Router>
+  constructor(props) {
+    super(props);
+    this.state = { hideCalendar: false };
+    
+    this.props.history.listen(() => {
+      this.updateCalendarVisibility();
+    });
+  }
+
+  componentDidMount() {
+    this.updateCalendarVisibility();
+  }
+
+  updateCalendarVisibility() {
+    this.setState({
+      hideCalendar:
+        window.location.href.indexOf('/dashboard') < 0
+    });
+  }
+
+  render() {
+    return (
+      <div>
         <Header />
-
         <div className="container-fluid d-flex p-0">
-            <Navbar />
+          <Navbar />
 
-            <main>
-              <Switch>
-                <Route path="/courses"><Courses /></Route>
-                <Route path="/grades"><Grades /></Route>
-                <Route path="/messages"><Messages /></Route>
-                <Route path="/projects"><Projects /></Route>
-                <Route path="/"><Dashboard /></Route>
-              </Switch>
-            </main>
+          <main>
+            <Switch>
+              <Route exact path="/">
+                <Redirect to="/dashboard" />
+              </Route>
+              <Route path="/courses"><Courses /></Route>
+              <Route path="/grades"><Grades /></Route>
+              <Route path="/messages"><Messages /></Route>
+              <Route path="/projects"><Projects /></Route>
+              <Route path="/dashboard"><Dashboard /></Route>
+            </Switch>
+          </main>
 
-            <NavCalendar />
+          <NavCalendar className={this.state.hideCalendar ? "collapse" : ""} />
         </div>
-      </Router>
-    </div>
-  );
+      </div>)
+  }
+}
+
+let AppBodyWithRouter = withRouter(AppBody);
+
+export default class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <AppBodyWithRouter />
+        </Router>
+      </div>
+    );
+  }
 }

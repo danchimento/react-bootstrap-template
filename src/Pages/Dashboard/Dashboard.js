@@ -15,10 +15,17 @@ export default function Dashboard() {
         <div id="dashboard">
             <div class="row">
                 <div class="col">
-                    <NavCard title="My Courses" primary={true} linkText="All Courses" linkSrc="/courses">
-                        {courses.map(c => {
+                    <NavCard className="tz-courses" title="My Courses" primary={true} linkText="All Courses" linkSrc="/courses">
+                        {courses.slice(0, 3).map((c, i) => {
+                            let className =
+                                i === 0 ? "d-block" :
+                                i === 1 ? "d-none d-sm-block" :
+                                i === 2 ? "d-none d-xl-block" : "";
+
                             return (
                                 <CourseCard
+                                    className={className}
+                                    courseCode={c.code}
                                     courseName={c.title}
                                     image={c.image}
                                     instructorName={c.instructorName}
@@ -29,7 +36,7 @@ export default function Dashboard() {
                 </div>
             </div>
             <div class="row mt-3">
-                <div className="col col-sm-12 col-md-6">
+                <div className="col-12 col-md-6">
                     <NavCard title="Recent Messages" linkText="All Messages" linkSrc="/messages">
                         <div className="mt-3">
                             {recentMessages.map(m => {
@@ -50,7 +57,7 @@ export default function Dashboard() {
                         </div>
                     </NavCard>
                 </div>
-                <div className="tz-todo col col-sm-12 col-md-6">
+                <div className="tz-todo col-12 col-md-6">
                     <NavCard>
                         <div>
                             <ul class="nav nav-tabs">

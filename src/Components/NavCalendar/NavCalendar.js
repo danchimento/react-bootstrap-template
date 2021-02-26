@@ -3,9 +3,14 @@ import Icon from "../Icon/Icon";
 import clockIcon from '../../assets/icons/clock-icon.svg';
 import "./NavCalendar.scss";
 
-export default function NavCalendar() {
+export default function NavCalendar(props) {
+    let className = "d-xs-block bg-white sidebar";
+    if (props.className) {
+        className += ` ${props.className}`;
+    }
+
     return (
-        <nav id="calendarMenu" className="d-xs-block bg-white sidebar">
+        <nav id="calendarMenu" className={className}>
             <div className="position-sticky pt-3 w-100">
                 <h3>March 2021</h3>
                 <Calendar showNavigation={false}/>
