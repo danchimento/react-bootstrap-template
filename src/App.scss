@@ -19,8 +19,11 @@ html, body, #root, .App > div {
 main {
     flex-grow: 1;
     padding: 1em map-get($map: $spacers, $key: 3);
+    overflow-x: auto;
 }
 
 
 @media (max-width: 767.98px) {
 }
+
+@import "bootstrap";

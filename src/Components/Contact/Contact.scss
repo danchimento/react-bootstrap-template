@@ -1,0 +1,13 @@
+@import '../../theme.scss';
+
+.tz-contact {
+
+    &.selected * {
+        color: white !important;
+    }
+
+    .tz-contact-image {
+        width: 3em;
+        height: 3em;
+    }
+}

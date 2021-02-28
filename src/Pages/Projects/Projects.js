@@ -1,11 +1,21 @@
 import './Projects.scss';
+import ProjectColumn from '../../Components/ProjectColumn/ProjectColumn';
+import { projects } from '../../Data';
+import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 
 export default function Projects() {
     return (
-        <div>
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Projects</h1>
-               
+        <div id="projects">
+            <h1 className="mb-4">Projects</h1>
+
+            <div className="d-flex flex-row">
+                {projects.columns.map(c => {
+                    return <ProjectColumn className="me-3" title={c.title} canAdd={c.canAdd}>
+                        {c.items.map(p => {
+                            return <ProjectCard project={p} />
+                        })}
+                    </ProjectColumn>
+                })}
             </div>
         </div>
     );

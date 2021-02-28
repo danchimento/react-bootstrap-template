@@ -2,8 +2,12 @@ import computerImage from './assets/images/computer-img.png';
 import geologyImage from './assets/images/geology-img.png';
 import engineeringImage from './assets/images/engineering-img.png';
 import chemistryImage from './assets/images/chemistry-img.png';
+
+import jacobImage from './assets/images/person-img.png';
 import grigoryImage from './assets/images/person9-img.png';
 import danielleImage from './assets/images/person8-img.png';
+import person13Image from './assets/images/person13-img.png';
+import person6Image from './assets/images/person6-img.png';
 
 import lectureIcon from './assets/icons/lecture-icon.svg';
 import postIcon from './assets/icons/post-icon.svg';
@@ -17,6 +21,7 @@ export const courses = [
         instructorName: "J. Winston",
         numStudents: 13,
         image: computerImage,
+        grade: "A-",
         grades: [
             { 
                 name: "Variables and Strings Gist",
@@ -176,3 +181,304 @@ export const todos = [
     { "title" : "Confirm Friday Meet" },
 ]
 
+export const conversations = [
+    {
+        name: "Jacob Han",
+        handle: "@JacobHan",
+        image: jacobImage,
+        lastMessagePreview: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+        lastMessageDate: "12:48 PM",
+        status: "Online",
+        messages: [
+            {
+                sender: "@JacobHan",
+                message: "Excepteur sint occaecat cupidatat non proident.",
+                date: "7:50 PM"
+            },
+            {
+                sender: "@JacobHan",
+                message: "Excepteur sint occaecat cupidatat non proident.",
+                date: "7:50 PM"
+            },
+            {
+                sender: "@Me",
+                message: "Excepteur sint occaecat cupidatat non proident.",
+                date: "7:50 PM"
+            },
+            {
+                sender: "@Me",
+                message: "Excepteur sint occaecat cupidatat non proident.",
+                date: "7:50 PM"
+            },
+            {
+                sender: "@Me",
+                message: "Excepteur sint occaecat cupidatat non proident.",
+                date: "7:50 PM"
+            },
+            {
+                sender: "@Me",
+                date: "7:50 PM",
+                file: {
+                    type: "PDF",
+                    title: "Disasater Relief Analysis for SOC 201",
+                    size: "103.4 MB"
+                }
+            },
+            {
+                sender: "@JacobHan",
+                message: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                date: "7:50 PM"
+            },
+        ]
+    },
+    {
+        name: "Jacob Han",
+        handle: "@JacobHan",
+        image: jacobImage,
+        lastMessagePreview: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+        lastMessageDate: "12:48 PM",
+        status: "Online"
+    },
+    {
+        name: "Jacob Han",
+        handle: "@JacobHan",
+        image: jacobImage,
+        attachment: true,
+        lastMessagePreview: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+        lastMessageDate: "12:48 PM",
+        status: "Online"
+    },
+    {
+        name: "Jacob Han",
+        handle: "@JacobHan",
+        image: jacobImage,
+        attachment: true,
+        lastMessagePreview: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+        lastMessageDate: "12:48 PM",
+        status: "Online"
+    },
+    {
+        name: "Jacob Han",
+        handle: "@JacobHan",
+        image: jacobImage,
+        attachment: true,
+        lastMessagePreview: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+        lastMessageDate: "12:48 PM",
+        status: "Online"
+    },
+    {
+        name: "Jacob Han",
+        handle: "@JacobHan",
+        image: jacobImage,
+        attachment: true,
+        lastMessagePreview: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+        lastMessageDate: "12:48 PM",
+        status: "Online"
+    },
+    {
+        name: "Jacob Han",
+        handle: "@JacobHan",
+        image: jacobImage,
+        attachment: true,
+        lastMessagePreview: "Duis aute irure dolor in reprehenderit in voluptate velit.",
+        lastMessageDate: "12:48 PM",
+        status: "Online"
+    },
+]
+
+export const projects = {
+    columns: [ 
+        {
+            title: "New",
+            canAdd: true,
+            items: [
+                {
+                    title: "Calcium Deposits Report",
+                    course: "GEO 205",
+                    attachments: 13,
+                    totalTasks: 5,
+                    style: "warning",
+                    completedTasks: 0,
+                    timeRemainingStatus: "ok",
+                    showProgressBar: false,
+                    timeRemaining: "14 days",
+                    assignees: [
+                        {
+                            image: person13Image,
+                            firstName: "Jason",
+                            lastName: "Whitman"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox",
+                            color: "#FF8161"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox"
+                        }
+                    ]
+                },
+                {
+                    title: "Engine Subject Presentation",
+                    course: "ENG 250",
+                    attachments: 2,
+                    totalTasks: 8,
+                    style: "warning",
+                    completedTasks: 0,
+                    timeRemainingStatus: "ok",
+                    showProgressBar: false,
+                    timeRemaining: "10 days",
+                    assignees: [
+                        {
+                            image: person6Image,
+                            firstName: "Jason",
+                            lastName: "Whitman"
+                        },
+                        {
+                            firstName: "Erin",
+                            lastName: "Li",
+                            color: "#FFD061"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            title: "In Progress",
+            canAdd: false,
+            items: [
+                {
+                    title: "Calcium Deposits Report",
+                    course: "GEO 205",
+                    attachments: 13,
+                    totalTasks: 5,
+                    style: "ok",
+                    completedTasks: 4,
+                    timeRemainingStatus: "danger",
+                    showProgressBar: true,
+                    timeRemaining: "1 day",
+                    assignees: [
+                        {
+                            image: person13Image,
+                            firstName: "Jason",
+                            lastName: "Whitman"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox",
+                            color: "#FF8161"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox"
+                        }
+                    ]
+                },
+                {
+                    title: "Engine Subject Presentation",
+                    course: "ENG 250",
+                    attachments: 2,
+                    totalTasks: 5,
+                    style: "ok",
+                    completedTasks: 2,
+                    timeRemainingStatus: "danger",
+                    showProgressBar: true,
+                    timeRemaining: "2 days",
+                    assignees: [
+                        {
+                            image: person6Image,
+                            firstName: "Jason",
+                            lastName: "Whitman"
+                        },
+                        {
+                            firstName: "Erin",
+                            lastName: "Li",
+                            color: "#FFD061"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            title: "Submitted",
+            canAdd: false,
+            items: [
+                {
+                    title: "Calcium Deposits Report",
+                    course: "GEO 205",
+                    attachments: 13,
+                    totalTasks: 5,
+                    style: "success",
+                    completedTasks: 5,
+                    timeRemainingStatus: "danger",
+                    showProgressBar: true,
+                    timeRemaining: null,
+                    assignees: [
+                        {
+                            image: person13Image,
+                            firstName: "Jason",
+                            lastName: "Whitman"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox",
+                            color: "#FF8161"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox"
+                        },
+                        {
+                            firstName: "Alex",
+                            lastName: "Fox"
+                        }
+                    ]
+                },
+                {
+                    title: "Engine Subject Presentation",
+                    course: "ENG 250",
+                    attachments: 2,
+                    totalTasks: 5,
+                    style: "success",
+                    completedTasks: 5,
+                    timeRemainingStatus: "danger",
+                    showProgressBar: true,
+                    timeRemaining: null,
+                    assignees: [
+                        {
+                            image: person6Image,
+                            firstName: "Jason",
+                            lastName: "Whitman"
+                        },
+                        {
+                            firstName: "Erin",
+                            lastName: "Li",
+                            color: "#FFD061"
+                        }
+                    ]
+                }
+            ]
+        },
+    ]
+}

@@ -1,0 +1,40 @@
+@import '../../theme.scss';
+
+.tz-message {
+    .tz-message-body {
+        background-color: $tertiary;
+        max-width: 350px;
+    }
+
+    .tz-message-attachment {
+        background-color: #FFCDC7;
+        color: #DF2D2D;
+        max-width: 250px;
+        position: relative;
+
+        .tz-message-attachment-type {
+            position: absolute;
+            opacity: .23;
+            font-size: 5em;
+            bottom: 0;
+            right: 0;
+            line-height: 1;
+        }
+
+        .badge {
+            background: #DF2D2D;
+        }
+
+        .tz-icon {
+            filter: invert(48%) sepia(54%) saturate(7470%) hue-rotate(339deg) brightness(109%) contrast(82%);
+        }
+    }
+
+    &.me {
+        flex-direction: row-reverse !important;
+
+        .tz-message-body {
+            background-color: $subtle-grey;
+        }
+    }
+}
