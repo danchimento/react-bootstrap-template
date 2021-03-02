@@ -13,6 +13,11 @@ import lectureIcon from './assets/icons/lecture-icon.svg';
 import postIcon from './assets/icons/post-icon.svg';
 import submissionIcon from './assets/icons/submission-icon.svg';
 import assessmentIcon from './assets/icons/assessment-icon.svg';
+import libraryIcon from './assets/icons/library-icon.svg';
+import driveIcon from './assets/icons/drive-icon.svg';
+import wikipediaIcon from './assets/icons/wikipedia-icon.svg';
+import wolframIcon from './assets/icons/wolfram-icon.svg';
+
 
 export const courses = [
     {
@@ -482,3 +487,43 @@ export const projects = {
         },
     ]
 }
+
+export const apps = [
+    {
+        title: "My Library",
+        icon: libraryIcon
+    },
+    {
+        title: "Google Drive",
+        icon: driveIcon
+    },
+    {
+        title: "Wikipedia",
+        icon: wikipediaIcon
+    },
+    {
+        title: "Wolfram Alpha",
+        icon: wolframIcon
+    },
+]
+
+export const upcomingEvents = [
+    {
+        title: "Qualitative Data Survey",
+        type: "Assignment",
+        color: "#434ABE",
+        dueDate: "March 11, 2021",
+    },
+    {
+        title: "MAT 150: Introduction to Calculus",
+        type: "Class",
+        color: "#43BE6C",
+        dueDate: "March 16, 2021",
+    },
+    {
+        title: "Organic Chem Study Session",
+        type: "Event",
+        color: "#BE4399",
+        dueDate: "March 23, 2021",
+    }
+]

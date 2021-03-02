@@ -13,7 +13,6 @@ import Messages from './Pages/Messages/Messages';
 import Projects from './Pages/Projects/Projects';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
-import NavCalendar from './Components/NavCalendar/NavCalendar';
 import { Component } from 'react';
 
 class AppBody extends Component {
@@ -58,7 +57,6 @@ class AppBody extends Component {
             </Switch>
           </main>
 
-          <NavCalendar className={this.state.hideCalendar ? "collapse" : ""} />
         </div>
       </div>)
   }

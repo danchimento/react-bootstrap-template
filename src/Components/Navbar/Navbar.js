@@ -7,6 +7,7 @@ import messagesIcon from '../../assets/icons/messages-icon.svg';
 import projectsIcon from '../../assets/icons/projects-icon.svg';
 import accountImage from '../../assets/images/person3-img.png';
 import Icon from '../Icon/Icon';
+import { apps } from '../../Data';
 
 export default function Navbar(props) {
 
@@ -36,7 +37,7 @@ export default function Navbar(props) {
   ]
 
   return (
-    <nav id="sidebarMenu" className={`bg-white sidebar ${props.className}`}>
+    <nav id="sidebarMenu" className={`bg-white sidebar px-3 ${props.className}`}>
       <div className="position-sticky pt-2">
         <div className="p-2 px-3 bg-light d-flex flex-row align-items-center justify-content-start tz-account rounded border mb-3">
           <img className="rounded-circle" alt="Profile" src={accountImage} />
@@ -47,9 +48,19 @@ export default function Navbar(props) {
         </div>
         <ul className="nav flex-column">
           {navItems.map(i =>
-            <li className="nav-item pe-5">
+            <li className="nav-item pe-5 mt-2">
               <Link className="nav-link active font-weight-semi-bold" aria-current="page" to={i.src}>
                 <Icon className="me-3" src={i.icon} /> <span>{i.title}</span>
+              </Link>
+            </li>
+          )}
+        </ul>
+        <ul className="nav flex-column mt-4" id="apps">
+          <div className="text-muted font-weight-medium px-2 mb-2">APPS</div>
+          {apps.map(i =>
+            <li className="nav-item pe-5">
+              <Link className="nav-link active font-weight-semi-bold" aria-current="page" to={i.src}>
+                <Icon className="me-3" src={i.icon} /> <span className="font-weight-light">{i.title}</span>
               </Link>
             </li>
           )}
