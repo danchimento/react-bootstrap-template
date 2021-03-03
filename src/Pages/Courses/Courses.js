@@ -6,6 +6,7 @@ import teacherImage from '../../assets/images/teacher-img.png';
 import enlargeIcon from '../../assets/icons/enlarge-icon.svg';
 import settingsIcon from '../../assets/icons/settings-icon.svg';
 import minimizeIcon from '../../assets/icons/minimize-icon.svg';
+import searchIcon from '../../assets/icons/search-icon.svg';
 import Icon from '../../Components/Icon/Icon';
 
 export default function Courses() {
@@ -25,6 +26,13 @@ export default function Courses() {
             <div className="tz-assignments col-sm-auto p-3 bg-white d-none d-lg-block">
                 <div className="text-muted font-weight-semi-bold">{course.code}</div>
                 <h3>{course.title}</h3>
+
+                <div class="input-group my-3">
+                    <span class="input-group-text">
+                        <Icon src={searchIcon} />
+                    </span>
+                    <input className="form-control" placeholder="Search Courses" />
+                </div>
 
                 <div className="mt-3">
                     {course.schedule.map(s => {

@@ -249,15 +249,17 @@ export const conversations = [
         handle: "@JacobHan",
         image: jacobImage,
         attachment: true,
+        unread: true,
         lastMessagePreview: "Duis aute irure dolor in reprehenderit in voluptate velit.",
         lastMessageDate: "12:48 PM",
         status: "Online"
     },
     {
-        name: "Jacob Han",
+        name: "Jacob Hans",
         handle: "@JacobHan",
         image: jacobImage,
         attachment: true,
+        unread: true,
         lastMessagePreview: "Duis aute irure dolor in reprehenderit in voluptate velit.",
         lastMessageDate: "12:48 PM",
         status: "Online"

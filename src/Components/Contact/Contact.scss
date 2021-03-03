@@ -2,8 +2,16 @@
 
 .tz-contact {
 
-    &.selected * {
-        color: white !important;
+    &.unread {
+        background-color: lighten($info, 45%) !important;
+    }
+
+    &.selected {
+        background-color: lighten($info, 20%) !important;
+        
+        & * {
+            color: white !important;
+        }
     }
 
     .tz-contact-image {

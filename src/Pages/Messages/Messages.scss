@@ -15,6 +15,16 @@ $contacts-width: 350px;
         flex-direction: column;
         margin-left: -1rem;
 
+        input {
+            background: $body-bg;
+            border: none;
+        }
+
+        .input-group-text {
+            border: none;
+            background-color: $body-bg;
+        }
+
         .tz-contact-container:last-child {
             border-bottom: none !important;
         }

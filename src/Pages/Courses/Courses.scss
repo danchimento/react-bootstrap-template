@@ -43,6 +43,16 @@
         .active .tz-assignment {
             background-color: #F0F7FC;
         }
+
+        input {
+            background: $body-bg;
+            border: none;
+        }
+
+        .input-group-text {
+            border: none;
+            background-color: $body-bg;
+        }
     }
 
     .tz-lecture {

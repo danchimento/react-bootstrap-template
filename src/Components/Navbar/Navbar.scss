@@ -19,9 +19,32 @@
             margin-top: 0 !important;
             padding-top: 0 !important;
         }
+
+        position: relative;
+
+        &.active .active-indicator{
+            position: fixed;
+            left: 0;
+            height: 3em;
+            width: 5px;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+            background-color: $primary;
+        }
+
+
+        &.active {
+            .nav-link {
+                color: $primary;
+            }
+
+         
+        }
     }
 
     .nav-link {
+        color: #171725;
+        
         img {
             width: 20px;
             height: 20px;
@@ -66,6 +89,7 @@
 
         .nav-item {
             padding-right: 0 !important;
+            position: relative;
 
             .nav-link {
                 .tz-icon {

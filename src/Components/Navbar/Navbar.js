@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 import dashboardIcon from '../../assets/icons/dashboard-icon.svg';
 import coursesIcon from '../../assets/icons/courses-icon.svg';
@@ -11,11 +11,13 @@ import { apps } from '../../Data';
 
 export default function Navbar(props) {
 
+  const location = useLocation();
+
   let navItems = [
     {
       title: "Dashbaord",
       src: "/dashboard",
-      icon: dashboardIcon
+      icon: dashboardIcon,
     },
     {
       title: "Courses",
@@ -47,7 +49,10 @@ export default function Navbar(props) {
         </div>
         <ul className="nav flex-column">
           {navItems.map(i =>
-            <li className="nav-item mt-2">
+            <li className={`nav-item mt-2 ${location.pathname.indexOf(i.src) >= 0 ? 'active ' : ' '}`}>
+              
+              <div className="active-indicator"></div>
+
               <Link className="nav-link active font-weight-semi-bold" aria-current="page" to={i.src}>
                 <Icon className="me-3" src={i.icon} /> <span>{i.title}</span>
               </Link>
@@ -65,4 +70,4 @@ export default function Navbar(props) {
           )}
         </ul>
     </nav>)
-}
+};
