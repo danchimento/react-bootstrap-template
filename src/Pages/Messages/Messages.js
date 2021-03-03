@@ -14,8 +14,8 @@ export default function Messages() {
     return (
         <div id="messages" className="d-flex flex-row">
             <div className="tz-contacts-list bg-white px-2 flex-shrink-1 border-end d-none d-sm-block">
-                <div class="input-group mb-3 mt-2">
-                    <span class="input-group-text">
+                <div className="input-group mb-3 mt-2">
+                    <span className="input-group-text">
                         <Icon src={searchIcon} />
                     </span>
                     <input className="form-control" placeholder="Search Courses" />

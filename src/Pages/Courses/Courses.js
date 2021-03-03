@@ -27,8 +27,8 @@ export default function Courses() {
                 <div className="text-muted font-weight-semi-bold">{course.code}</div>
                 <h3>{course.title}</h3>
 
-                <div class="input-group my-3">
-                    <span class="input-group-text">
+                <div className="input-group my-3">
+                    <span className="input-group-text">
                         <Icon src={searchIcon} />
                     </span>
                     <input className="form-control" placeholder="Search Courses" />
@@ -73,19 +73,19 @@ export default function Courses() {
                             {assignment.by} | {assignment.date}
                         </div>
                         <div>
-                            <ul class="nav nav-tabs mt-5">
-                                <li class="nav-item">
-                                    <a data-toggle="tab" class="nav-link" href="#transcript">TRANSCRIPT</a>
+                            <ul className="nav nav-tabs mt-5">
+                                <li className="nav-item">
+                                    <a data-toggle="tab" className="nav-link" href="#transcript">TRANSCRIPT</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a data-toggle="tab" class="nav-link active" href="#assets">ASSETS</a>
+                                <li className="nav-item">
+                                    <a data-toggle="tab" className="nav-link active" href="#assets">ASSETS</a>
                                 </li>
                             </ul>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade pt-3" id="transcript" role="tabpanel" aria-labelledby="todo-tab">
+                            <div className="tab-content" id="myTabContent">
+                                <div className="tab-pane fade pt-3" id="transcript" role="tabpanel" aria-labelledby="todo-tab">
 
                                 </div>
-                                <div class="tab-pane fade show active pt-3" id="assets" role="tabpanel" aria-labelledby="completed-tab">
+                                <div className="tab-pane fade show active pt-3" id="assets" role="tabpanel" aria-labelledby="completed-tab">
 
                                     {assignment.assets.map(a => {
                                         return (

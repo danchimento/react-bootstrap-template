@@ -294,6 +294,11 @@ export const conversations = [
 ]
 
 export const projects = {
+    projects: [
+        "Project 1",
+        "Project 2",
+        "Project 3"
+    ],
     columns: [ 
         {
             title: "New",

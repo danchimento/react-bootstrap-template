@@ -36,10 +36,10 @@ function renderProgressBar(project) {
         <div className="text-muted d-flex flex-row justify-content-end">
            <div>{percentComplete}%</div>
         </div>
-        <div class="progress mb-3" style={{ height: 5 }}>
+        <div className="progress mb-3" style={{ height: 5 }}>
             <div
                 style={{ width: `${percentComplete}%` }}
-                class="progress-bar bg-success"
+                className="progress-bar bg-success"
                 role="progressbar"
                 aria-valuenow={percentComplete}
                 aria-valuemin="0"

@@ -12,7 +12,7 @@ export default function Grades() {
                 <h2 className="mb-0"><Icon className="fz-small" src={stackIcon} /> {course.code}: {course.title} </h2>
                 <div className="ms-3 tz-grade bg-info text-white rounded-circle p-2 font-weight-semi-bold d-flex align-items-center justify-content-center fz-x-small">{course.grade}</div>
             </div>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col" className="text-center align-middle font-weight-semi-bold ">Name</th>

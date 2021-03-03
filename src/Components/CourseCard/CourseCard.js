@@ -14,7 +14,7 @@ export default function CourseCard(props) {
                 <div className="tz-course-card-subtitle">
                     {props.instructorName} &#8226; {props.numStudents} Students
                 </div>
-                <button class="btn btn-secondary">
+                <button className="btn btn-secondary">
                     View Course
                 </button>
             </div>

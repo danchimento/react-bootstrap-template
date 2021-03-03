@@ -16,7 +16,7 @@ export default function Message(props) {
             </div> :
             <div className="tz-message-attachment rounded border p-3 fz-larger font-weight-regular d-flex flex-column"> 
                 {props.message.file.title}
-                <div class="badge align-self-start">{props.message.file.size}</div>
+                <div className="badge align-self-start">{props.message.file.size}</div>
                 <div className="mt-5 d-flex flex-row justify-content-between flex-grow-1 align-items-end">
                     <div className="d-flex flex-row fz-larger">
                         <Icon className="me-2" src={downloadIcon} />

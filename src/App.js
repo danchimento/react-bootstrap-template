@@ -15,6 +15,9 @@ import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
 import { Component } from 'react';
 
+// eslint-disable-next-line 
+import * as bootstrap from 'bootstrap'; 
+
 class AppBody extends Component {
 
   constructor(props) {

@@ -16,8 +16,8 @@ export default function Dashboard() {
         <div id="dashboard">
             <div className="d-flex flex-row">
                 <div className="flex-grow-1 me-3">
-                    <div class="row">
-                        <div class="col">
+                    <div className="row">
+                        <div className="col">
                             <NavCard className="tz-courses" title="My Courses" primary={true} linkText="All Courses" linkSrc="/courses">
                                 {courses.slice(0, 3).map((c, i) => {
                                     let className =
@@ -38,7 +38,7 @@ export default function Dashboard() {
                             </NavCard>
                         </div>
                     </div>
-                    <div class="row mt-3">
+                    <div className="row mt-3">
                     <div className="col-12 col-md-6">
                         <NavCard title="Recent Messages" linkText="All Messages" linkSrc="/messages">
                             <div className="mt-3">
@@ -63,21 +63,21 @@ export default function Dashboard() {
                     <div className="tz-todo col-12 col-md-6">
                         <NavCard>
                             <div>
-                                <ul class="nav nav-tabs">
-                                    <li class="nav-item">
-                                        <a data-toggle="tab" class="nav-link active" href="#todo">TODO</a>
+                                <ul className="nav nav-tabs">
+                                    <li className="nav-item">
+                                        <a data-toggle="tab" className="nav-link active" href="#todo">TODO</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a data-toggle="tab" class="nav-link" href="#completed">COMPLETED</a>
+                                    <li className="nav-item">
+                                        <a data-toggle="tab" className="nav-link" href="#completed">COMPLETED</a>
                                     </li>
                                 </ul>
-                                <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active pt-3" id="todo" role="tabpanel" aria-labelledby="todo-tab">
+                                <div className="tab-content" id="myTabContent">
+                                    <div className="tab-pane fade show active pt-3" id="todo" role="tabpanel" aria-labelledby="todo-tab">
                                         {todos.map((t, i) => {
                                             return <TodoListItem number={i + 1} item={t} />
                                         })}
                                     </div>
-                                    <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+                                    <div className="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
                                         COMPLETED
                                     </div>
                                 </div>

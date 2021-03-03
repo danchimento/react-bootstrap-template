@@ -1,6 +1,7 @@
 import Calendar from "react-calendar";
 import Icon from "../Icon/Icon";
 import clockIcon from '../../assets/icons/clock-icon.svg';
+import addIcon from '../../assets/icons/add-icon.svg';
 import "./NavCalendar.scss";
 import { upcomingEvents } from '../../Data';
 
@@ -12,8 +13,15 @@ export default function NavCalendar(props) {
 
     return (
         <nav id="calendarMenu" className={className}>
-            <div className="p-3 pb-5 w-100">
+            <div className="p-3 pb-5 pt-5 w-100 position-relative">
                 <h3>March 2021</h3>
+
+                <div class="position-absolute top-0 end-0 text-muted calendar-nav d-flex flex-row align-items-center">
+                    <button className="btn bg-white border rounded-circle text-muted">‹</button>
+                    <button className="btn bg-white border rounded-circle text-muted">›</button>
+                    <button className="btn bg-white border rounded-circle text-muted"><Icon src={addIcon} /></button>
+                </div>
+
                 <Calendar showNavigation={false}/>
 
                 <div className="tz-today rounded w-100 pb-3 p-2 mt-3">
