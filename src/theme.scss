@@ -27,9 +27,11 @@ $white-filter: invert(93%) sepia(0%) saturate(5482%) hue-rotate(154deg) brightne
 $muted-filter: invert(50%) sepia(2%) saturate(1735%) hue-rotate(167deg) brightness(89%) contrast(82%);
 
 // Nav
-$nav-width: 225px;
 $nav-width-mobile: 65px;
 $nav-link-padding-y: .5rem;
+$nav-link-padding-x: .5rem;
+$nav-bar-size: 250px;
+$nav-bar-size-small: 65px;
 
 // Tabs
 $nav-tabs-link-color: $color-grey;
@@ -55,6 +57,8 @@ $badge-font-weight: 400;
 
 // Inputs
 $input-border-radius: $border-radius;
+
+
 
 
 @import 'bootstrap/scss/_functions.scss';

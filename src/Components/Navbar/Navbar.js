@@ -37,8 +37,7 @@ export default function Navbar(props) {
   ]
 
   return (
-    <nav id="sidebarMenu" className={`bg-white sidebar px-3 ${props.className}`}>
-      <div className="position-sticky pt-2">
+    <nav id="sidebarMenu" className={`bg-white sidebar ${props.className}`}>
         <div className="p-2 px-3 bg-light d-flex flex-row align-items-center justify-content-start tz-account rounded border mb-3">
           <img className="rounded-circle" alt="Profile" src={accountImage} />
           <div className="ms-2 d-none d-md-block">
@@ -48,23 +47,22 @@ export default function Navbar(props) {
         </div>
         <ul className="nav flex-column">
           {navItems.map(i =>
-            <li className="nav-item pe-5 mt-2">
+            <li className="nav-item mt-2">
               <Link className="nav-link active font-weight-semi-bold" aria-current="page" to={i.src}>
                 <Icon className="me-3" src={i.icon} /> <span>{i.title}</span>
               </Link>
             </li>
           )}
         </ul>
-        <ul className="nav flex-column mt-4" id="apps">
-          <div className="text-muted font-weight-medium px-2 mb-2">APPS</div>
+        <div className="text-muted font-weight-medium mt-4 px-2 mb-2">APPS</div>
+        <ul className="nav flex-column " id="apps">
           {apps.map(i =>
-            <li className="nav-item pe-5">
+            <li className="nav-item">
               <Link className="nav-link active font-weight-semi-bold" aria-current="page" to={i.src}>
                 <Icon className="me-3" src={i.icon} /> <span className="font-weight-light">{i.title}</span>
               </Link>
             </li>
           )}
         </ul>
-      </div>
     </nav>)
 }

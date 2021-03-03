@@ -5,12 +5,13 @@ import Message from '../../Components/Message/Message';
 import Icon from '../../Components/Icon/Icon';
 import emojiIcon from '../../assets/icons/emoji-icon.svg';
 import attachmentIcon from '../../assets/icons/paperclip-icon.svg';
+import accountImage from '../../assets/images/person3-img.png';
 
 export default function Messages() {
     let conversation = conversations[0];
     return (
         <div id="messages" className="d-flex flex-row">
-            <div className="tz-contacts-list bg-white p-2 flex-shrink-1 border-end d-none d-sm-block">
+            <div className="tz-contacts-list bg-white px-2 flex-shrink-1 border-end d-none d-sm-block">
                 {conversations.map((c, i) => {
                     return (
                         <div className="tz-contact-container py-2 border-bottom">
@@ -18,7 +19,7 @@ export default function Messages() {
                         </div>)
                 })}
             </div>
-            <div className="tz-messages-list flex-grow-1">
+            <div className="tz-messages-list">
                 <div className="bg-white p-3">
                     <img className="tz-account-image rounded-circle border me-2" src={conversation.image} alt="Profile" />
                     <span className="font-weight-semi-bold">{conversation.name}</span>
@@ -31,8 +32,8 @@ export default function Messages() {
                     })}
                 </div>
 
-                <div className="tz-messages-send w-100 p-3 position-sticky bottom-0 bg-white d-flex flex-row">
-                    <img className="rounded-circle border me-2" src={conversation.image} alt="Profile" />
+                <div className="tz-messages-send p-3 bottom-0 bg-white d-flex flex-row">
+                    <img className="rounded-circle border me-2" src={accountImage} alt="Profile" />
                     <input placeholder="Say something" className="form-control"></input>
                     <div className="fz-larger d-flex flex-row align-items-center">
                         <Icon className="ms-2" src={emojiIcon} />

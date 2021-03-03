@@ -1,20 +1,18 @@
 @import "../../theme.scss";
 
-.sidebar {
-    display: flex;
-    flex-shrink: 0;
-
-    .position-sticky {
-        align-self: flex-start;
-        top: 75px;
-    }
-}
-
 #sidebarMenu {
     position: fixed;
     left: 0;
-    top: 60px;
+    top: 0;
     bottom: 0;
+    padding-top: 70px;
+    width: $nav-bar-size;
+    padding-left: .5rem;
+    padding-right: .5rem;
+
+    .nav {
+        padding-left: .5rem;
+    }
 
     .nav-item {
         &:first-child {
@@ -52,9 +50,13 @@
 
 @media (max-width: 767.98px) {
     #sidebarMenu {
-        padding-right: map-get($map: $spacers, $key: 1) !important;
-        padding-left: map-get($map: $spacers, $key: 1) !important;
         justify-content: center;
+        width: $nav-bar-size-small;
+        text-align: center;
+
+        .nav {
+            padding-left: 0;
+        }
 
         .tz-account {
             padding-left: .5em !important;

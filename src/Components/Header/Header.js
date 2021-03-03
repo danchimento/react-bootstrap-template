@@ -11,16 +11,8 @@ export default function Header() {
         <img src={logo} alt="logo" />
         <span>TOZME</span>
       </Link>
-      {/* <button className="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button> */}
 
-      <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
-      {/* <ul className="navbar-nav px-3">
-        <li className="nav-item text-nowrap">
-          <a className="nav-link" href="#">Sign out</a>
-        </li>
-      </ul> */}
+      <input className="form-control ms-3" type="text" placeholder="Search" aria-label="Search" />
 
       <div className="flex-grow-1 d-flex flex-row justify-content-end pe-5 fz-large">
         <Icon src={notificationIcon} />
