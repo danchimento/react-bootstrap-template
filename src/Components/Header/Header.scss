@@ -2,6 +2,7 @@
 
 header.navbar {
     flex-wrap: nowrap;
+    overscroll-behavior: none;
 
     .navbar-brand {
         font-weight: 600;
@@ -15,7 +16,7 @@ header.navbar {
     }
 
     input.form-control {
-        width: 350px;
+        max-width: 350px;
         font-size: small;
     }
 }
