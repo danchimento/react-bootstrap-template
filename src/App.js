@@ -52,11 +52,7 @@ class AppBody extends Component {
               <Route exact path="/">
                 <Redirect to="/dashboard" />
               </Route>
-              <Route path="/courses"><Courses /></Route>
-              <Route path="/grades"><Grades /></Route>
-              <Route path="/messages"><Messages /></Route>
-              <Route path="/projects"><Projects /></Route>
-              <Route path="/dashboard"><Dashboard /></Route>
+              {/* <Route path="/page2"><Courses /></Route> */}
             </Switch>
           </main>
 
